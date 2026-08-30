@@ -6,7 +6,7 @@ const source = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8
 
 test("never presents public posting as autonomous", () => {
   assert.match(source, /Nothing is posted without your approval/);
-  assert.match(source, /No response is published/);
+  assert.match(source, /no response is published/i);
 });
 
 test("keeps ambiguous safety cases guarded", () => {

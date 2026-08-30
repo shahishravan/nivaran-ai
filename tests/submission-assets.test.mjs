@@ -23,5 +23,5 @@ test("submission checklist protects public-link verification", async () => {
   const checklist = await text("../SUBMISSION_CHECKLIST.md");
   assert.match(checklist, /Public/);
   assert.match(checklist, /incognito\/private window/i);
-  assert.match(checklist, /No \.env, API key, token, secret/);
+  assert.match(checklist, /No `?\.env`?, API key, token, secret/);
 });
